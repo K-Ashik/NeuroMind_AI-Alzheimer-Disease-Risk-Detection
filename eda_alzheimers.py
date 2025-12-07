@@ -99,7 +99,7 @@ plt.savefig(f"{output_dir}/01_amyloid_tau_scatter.png")
 plt.close()
 
 # Chart 2: Hippocampus Atrophy
-# Check if Hippocampus exists, if not, skip plot
+# Check if Hippocampus exists, if not, skip plot 
 if 'Hippocampus' in clean_df.columns:
     plt.figure(figsize=(8, 6))
     clean_df['Hippocampus'] = pd.to_numeric(clean_df['Hippocampus'], errors='coerce')
