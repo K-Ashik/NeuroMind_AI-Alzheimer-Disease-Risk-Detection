@@ -15,7 +15,7 @@ It goes beyond simple prediction by integrating a **Generative AI Doctor** (Goog
 ## Web App View
 ---
 
-<img width="300" height="484" alt="image" src="https://github.com/user-attachments/assets/68c15811-ecb9-4f2e-9278-6c948db2dd12" />
+<img width="900" height="884" alt="image" src="https://github.com/user-attachments/assets/68c15811-ecb9-4f2e-9278-6c948db2dd12" />
 
 
 ---
