@@ -13,6 +13,9 @@
 It goes beyond simple prediction by integrating a **Generative AI Doctor** (Google Gemini) to explain the *biology* behind the risk score in plain English.
 
 ---
+## 🚀 Live Demo
+Click here: [https://neuromindai-alzheimer-disease-risk-detection-4pktih6hk5k2yzmge.streamlit.app/]
+---
 
 ## 🚀 Key Features
 
@@ -40,7 +43,7 @@ Trained on the **TADPOLE (ADNI)** dataset, a gold-standard longitudinal study.
 | **Recall (Sick)** | **0.86** | Misses very few actual cases (High Sensitivity) |
 
 ### **Explainability (SHAP)**
-![SHAP Waterfall](assets/shap_waterfall.png)
+![SHAP Waterfall](<img width="1460" height="994" alt="image" src="https://github.com/user-attachments/assets/559d432b-2b2f-4d73-8a52-7bafdd071e4c" />)
 *The model confirms that **Neurotoxic Ratio** and **Hippocampus Volume** are the top drivers of risk, validating the biological hypothesis.*
 
 ---
