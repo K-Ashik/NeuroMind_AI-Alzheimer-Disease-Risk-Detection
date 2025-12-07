@@ -46,7 +46,7 @@ def load_and_train():
     df = df[available_feats].copy()
 
     # Clean Numerics
-    numeric_cols = ['ABETA', 'TAU', 'PTAU', 'Hippocampus', 'Ventricles', 'WholeBrain', 'Entorhinal', 'Fusiform']
+    numeric_cols = ['ABETA', 'TAU', 'PTAU', 'Hippocampus', 'Ventricles', 'WholeBrain', 'Entorhinal', 'Fusiform', 'AGE']
     for col in numeric_cols:
         if col in df.columns:
             df[col] = df[col].astype(str).str.replace(r'[><]', '', regex=True)
@@ -73,10 +73,21 @@ def load_and_train():
                   'Neurotoxic_Ratio', 'Hippocampus_Fraction']
     
     final_cols = [c for c in train_cols if c in df.columns]
+    
+    # Monotonic Constraints to ensure logical behavior (e.g., Age increases Risk)
+    constraint_map = {
+        'ABETA': -1, 'TAU': 1, 'PTAU': 1, 
+        'Hippocampus': -1, 'Ventricles': 1, 'WholeBrain': -1, 
+        'Entorhinal': -1, 'Fusiform': -1, 
+        'AGE': 1, 'PTGENDER': 0, 'APOE4': 1, 
+        'Neurotoxic_Ratio': 1, 'Hippocampus_Fraction': -1
+    }
+    constraints = tuple(constraint_map.get(c, 0) for c in final_cols)
+
     X = df[final_cols]
     y = df['Target']
 
-    model = xgb.XGBClassifier(n_estimators=100, max_depth=4, eval_metric='logloss')
+    model = xgb.XGBClassifier(n_estimators=100, max_depth=4, eval_metric='logloss', monotone_constraints=constraints)
     model.fit(X, y)
 
     return model, df, final_cols
