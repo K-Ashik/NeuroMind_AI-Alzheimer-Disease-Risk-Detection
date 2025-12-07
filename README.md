@@ -12,10 +12,10 @@
 
 It goes beyond simple prediction by integrating a **Generative AI Doctor** (Google Gemini) to explain the *biology* behind the risk score in plain English.
 
-##  <img width="2560" height="1707" alt="image" src="https://github.com/user-attachments/assets/dfc6c9c9-eac0-472c-a53c-be0b118abd1e" /> Web App View
+## Web App View
 ---
 
-<img width="3000" height="1484" alt="image" src="https://github.com/user-attachments/assets/68c15811-ecb9-4f2e-9278-6c948db2dd12" />
+<img width="300" height="484" alt="image" src="https://github.com/user-attachments/assets/68c15811-ecb9-4f2e-9278-6c948db2dd12" />
 
 
 ---
