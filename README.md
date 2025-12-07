@@ -12,6 +12,10 @@
 
 It goes beyond simple prediction by integrating a **Generative AI Doctor** (Google Gemini) to explain the *biology* behind the risk score in plain English.
 
+## Dataset Used: 
+
+**The ADNI / TADPOLE dataset to engineer a multimodal classifier, fusing CSF Proteomics ($A\beta$/Tau), MRI Volumetrics (Hippocampus), and Genetics (APOE4) to predict disease progression.**
+
 ## Web App View
 ---
 
